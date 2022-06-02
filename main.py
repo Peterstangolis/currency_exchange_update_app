@@ -139,11 +139,6 @@ if choose == 'CAN-EUR/EUR-CAN':
     eur_can, eur_to_can, prev_close_eur_can = eurcad_x("EURCAD=X")
     can_eur, can_to_eur, prev_close_can_eur = cadeur_x("CADEUR=X")
 
-    eur_can_chart()
-    can_eur_chart()
-
-    image_1 = Image.open("images/euro_can_high_low_chart.png")
-    image_2 = Image.open("images/can_euro_high_low_chart.png")
 
     fig = go.Figure(go.Indicator(
         mode="number+delta",
@@ -234,12 +229,18 @@ if choose == 'CAN-EUR/EUR-CAN':
 
     radio = st.radio("Select to view yearly currency trend EURO and CAD", ["1 Year EUR-CAD Chart", "1 Year CAD-EUR Chart"])
     if radio == "1 Year EUR-CAD Chart":
+        eur_can_chart()
+        image_1 = Image.open("images/euro_can_high_low_chart.png")
+
         st.subheader("€1 EUR to CAD Yearly High vs Low")
         st.image(image_1,
                  use_column_width=True,
                  caption = "")
 
     if radio == "1 Year CAD-EUR Chart":
+        can_eur_chart()
+        image_2 = Image.open("images/can_euro_high_low_chart.png")
+
         st.subheader("$1 CAD to EUR Yearly High vs Low")
         st.image(image_2,
                  use_column_width=True,
@@ -273,12 +274,6 @@ if choose == 'CAN-EUR/EUR-CAN':
 if choose == 'CAN-US/US-CAN':
     usd_can, usd_to_can, prev_close_us_can = usdcad_x("USDCAD=X")
     can_us, can_to_us, prev_close_can_us = cadusd_x("CADUSD=X")
-
-    usd_can_chart()
-    can_usd_chart()
-
-    image_1 = Image.open("images/usd_can_high_low_chart.png")
-    image_2 = Image.open("images/can_usd_high_low_chart.png")
 
 
     ## Plotly Indicator
@@ -356,16 +351,18 @@ if choose == 'CAN-US/US-CAN':
                      ["1 Year USD-CAD Chart", "1 Year CAD-USD Chart"])
 
     if radio == "1 Year USD-CAD Chart":
+        usd_can_chart()
+        image_1 = Image.open("images/usd_can_high_low_chart.png")
+
         st.subheader("$1 USD to CAD Yearly High vs Low")
-        st.image(image_1,
-                 use_column_width=True,
-                 caption="")
+        st.image(image_1, use_column_width=True)
 
     if radio == "1 Year CAD-USD Chart":
+        can_usd_chart()
+        image_2 = Image.open("images/can_usd_high_low_chart.png")
+
         st.subheader("$1 CAD to USD Yearly High vs Low")
-        st.image(image_2,
-                 use_column_width=True,
-                 caption="")
+        st.image(image_2, use_column_width=True)
 
     # c1, c2 = st.columns([1, 1])
     #
@@ -392,12 +389,6 @@ if choose == 'CAN-US/US-CAN':
 if choose == 'CAN-GBP/GBP-CAN':
     gbp_can, gbp_to_can, prev_close_gbp_can = gbpcad_x("GBPCAD=X")
     can_gbp, can_to_gbp, prev_close_can_gbp = cadgbp_x("CADGPD=X")
-
-    gbp_can_chart()
-    can_gbp_chart()
-
-    image_1 = Image.open("images/gbp_can_high_low_chart.png")
-    image_2 = Image.open("images/can_gbp_high_low_chart.png")
 
     ## Plotly Indicator
     fig5 = go.Figure(go.Indicator(
@@ -470,14 +461,18 @@ if choose == 'CAN-GBP/GBP-CAN':
     radio = st.radio("Select to view yearly trend", ["1 Year GBP-CAD Chart", "1 Year CAD-GBP Chart"])
 
     if radio == "1 Year GBP-CAD Chart":
+        gbp_can_chart()
+        image_1 = Image.open("images/gbp_can_high_low_chart.png")
+
         st.subheader("£1 GBP to CAD Yearly High vs Low")
-        st.image(image_1,
-                 use_column_width=True)
+        st.image(image_1, use_column_width=True)
 
     if radio == "1 Year CAD-GBP Chart":
+        can_gbp_chart()
+        image_2 = Image.open("images/can_gbp_high_low_chart.png")
+
         st.subheader("$1 CAD to GBP Yearly High vs Low")
-        st.image(image_2,
-                 use_column_width=True)
+        st.image(image_2, use_column_width=True)
 
     # c1, c2 = st.columns([1,1])
     #
