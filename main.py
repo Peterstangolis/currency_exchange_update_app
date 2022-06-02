@@ -117,7 +117,7 @@ currencies = ['CADGBP=X','GBPCAD=X', 'CADUSD=X', 'USDCAD=X','CADEUR=X', 'EURCAD=
 #st.title("Enter Title Here:")
 
 ## Horizontal Menu Bar
-choose = option_menu("Select to view updated exchange rate", ['CAN-EUR/EUR-CAN', 'CAN-US/US-CAN', 'CAN-GBP/GBP-CAN'],
+choose = option_menu("Select to view updated exchange rate", ['CAD-EUR', 'CAD-US', 'CAD-GBP'],
                      icons=['currency-euro', 'currency-dollar', 'currency-pound'],
                      menu_icon="app-indicator", default_index=0,
                      styles={
@@ -133,7 +133,7 @@ choose = option_menu("Select to view updated exchange rate", ['CAN-EUR/EUR-CAN',
 
 ## Updating the currency echange based on selection:
 
-if choose == 'CAN-EUR/EUR-CAN':
+if choose == 'CAD-EUR':
     eur_can, eur_to_can, prev_close_eur_can = eurcad_x("EURCAD=X")
     can_eur, can_to_eur, prev_close_can_eur = cadeur_x("CADEUR=X")
 
@@ -269,7 +269,7 @@ if choose == 'CAN-EUR/EUR-CAN':
         st.caption("")
 
 
-if choose == 'CAN-US/US-CAN':
+if choose == 'CAD-USD':
     usd_can, usd_to_can, prev_close_us_can = usdcad_x("USDCAD=X")
     can_us, can_to_us, prev_close_can_us = cadusd_x("CADUSD=X")
 
@@ -384,7 +384,7 @@ if choose == 'CAN-US/US-CAN':
         st.caption("")
 
 
-if choose == 'CAN-GBP/GBP-CAN':
+if choose == 'CAD-GBP':
     gbp_can, gbp_to_can, prev_close_gbp_can = gbpcad_x("GBPCAD=X")
     can_gbp, can_to_gbp, prev_close_can_gbp = cadgbp_x("CADGPD=X")
 
