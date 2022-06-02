@@ -127,7 +127,7 @@ def can_eur_chart():
     plt.xticks([])
     plt.yticks([])
     plt.axis('off')
-    plt.annotate(f"${can_eur_value_yr_high}\n{can_eur_date_yr_high.strftime('%d %b, %y')}",
+    plt.annotate(f"€{can_eur_value_yr_high}\n{can_eur_date_yr_high.strftime('%d %b, %y')}",
                  xytext=(can_eur_date_yr_high + datetime.timedelta(days=33), can_eur_value_yr_high + 0.005),
                  xy=(can_eur_date_yr_high, can_eur_value_yr_high),
                  xycoords="data",
@@ -140,7 +140,7 @@ def can_eur_chart():
                                  color='#004A44')
                  )
 
-    plt.annotate(f"${can_eur_value_yr_low}\n{can_eur_date_yr_low.strftime('%d %b, %y')}",
+    plt.annotate(f"€{can_eur_value_yr_low}\n{can_eur_date_yr_low.strftime('%d %b, %y')}",
                  xytext=(can_eur_date_yr_low + datetime.timedelta(days=25), can_eur_value_yr_low - 0.0233),
                  xy=(can_eur_date_yr_low, can_eur_value_yr_low),
                  xycoords="data",
