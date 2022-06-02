@@ -137,6 +137,8 @@ if choose == 'CAD-EUR':
     eur_can, eur_to_can, prev_close_eur_can = eurcad_x("EURCAD=X")
     can_eur, can_to_eur, prev_close_can_eur = cadeur_x("CADEUR=X")
 
+    st.title('CAD to EUR exchange rates')
+
 
     fig = go.Figure(go.Indicator(
         mode="number+delta",
@@ -334,7 +336,7 @@ if choose == 'CAD-USD':
     #                          yref='paper',
     #                          showarrow=False
     #                          ))
-    st.title("Canadian to US exchange rates:")
+    st.title("CAD to USD exchange rates")
 
     st.caption("🔺/🔻 Change from previous day close")
 
@@ -447,7 +449,7 @@ if choose == 'CAD-GBP':
     #                          showarrow=False
     #                          ))
 
-    st.title('Canadian to GBP exchange rates')
+    st.title('CAD to GBP exchange rates')
 
     st.caption("🔺/🔻 Change from previous day close")
 
