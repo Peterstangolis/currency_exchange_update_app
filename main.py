@@ -117,7 +117,7 @@ currencies = ['CADGBP=X','GBPCAD=X', 'CADUSD=X', 'USDCAD=X','CADEUR=X', 'EURCAD=
 #st.title("Enter Title Here:")
 
 ## Horizontal Menu Bar
-choose = option_menu("Select to view updated exchange rate", ['CAD-EUR', 'CAD-US', 'CAD-GBP'],
+choose = option_menu("Select to view updated exchange rate", ['CAD-EUR', 'CAD-USD', 'CAD-GBP'],
                      icons=['currency-euro', 'currency-dollar', 'currency-pound'],
                      menu_icon="app-indicator", default_index=0,
                      styles={

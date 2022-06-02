@@ -89,7 +89,7 @@ def eur_can_chart():
 
     plt.savefig('images/euro_can_high_low_chart.png',
                 bbox_inches='tight',
-                dpi=150,
+                dpi=140,
                 facecolor='#C9F0DB',
                 transparent=True)
     plt.close();
@@ -163,7 +163,7 @@ def can_eur_chart():
     plt.tight_layout()
     plt.savefig('images/can_euro_high_low_chart.png',
                 bbox_inches='tight',
-                dpi=150,
+                dpi=140,
                 facecolor='#C9F0DB',
                 transparent=True)
     plt.close();
@@ -236,7 +236,7 @@ def usd_can_chart():
 
     plt.savefig('images/usd_can_high_low_chart.png',
                 bbox_inches='tight',
-                dpi=150,
+                dpi=140,
                 facecolor='#C9F0DB',
                 transparent=True)
     plt.close();
@@ -308,7 +308,7 @@ def can_usd_chart():
 
     plt.savefig('images/can_usd_high_low_chart.png',
                 bbox_inches='tight',
-                dpi=150,
+                dpi=140,
                 facecolor='#C9F0DB',
                 transparent=True)
     plt.close();
@@ -379,7 +379,7 @@ def gbp_can_chart():
 
     plt.savefig('images/gbp_can_high_low_chart.png',
                 bbox_inches='tight',
-                dpi=150,
+                dpi=140,
                 facecolor='#C9F0DB',
                 transparent=True)
     plt.close();
@@ -456,7 +456,7 @@ def can_gbp_chart():
 
     plt.savefig('images/can_gbp_high_low_chart.png',
                 bbox_inches='tight',
-                dpi=150,
+                dpi=140,
                 facecolor='#C9F0DB',
                 transparent=True)
     plt.close();
