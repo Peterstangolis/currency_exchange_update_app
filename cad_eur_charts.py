@@ -53,7 +53,7 @@ def eur_can_chart():
     plt.xticks([])
     plt.yticks([])
     plt.axis('off')
-    plt.annotate(f"${eur_can_yr_high_value}\n{eur_can_yr_high_date.strftime('%d %b, %Y')}",
+    plt.annotate(f"${eur_can_yr_high_value}\n{eur_can_yr_high_date.strftime('%d %b, %y')}",
                  xytext=(eur_can_yr_high_date - datetime.timedelta(days=23), eur_can_yr_high_value + 0.055),
                  xy=(eur_can_yr_high_date, eur_can_yr_high_value),
                  xycoords="data",
@@ -66,7 +66,7 @@ def eur_can_chart():
                                  color='#00E3CC')
                  )
 
-    plt.annotate(f"${eur_can_yr_low_value}\n{eur_can_yr_low_date.strftime('%d %b, %Y')}",
+    plt.annotate(f"${eur_can_yr_low_value}\n{eur_can_yr_low_date.strftime('%d %b, %y')}",
                  xytext=(eur_can_yr_low_date - datetime.timedelta(days=60), eur_can_yr_low_value + 0.0133),
                  xy=(eur_can_yr_low_date, eur_can_yr_low_value),
                  xycoords="data",
@@ -200,7 +200,7 @@ def usd_can_chart():
     plt.yticks([])
     plt.axis('off')
 
-    plt.annotate(f"${usd_can_yr_high_value}\n{usd_can_yr_high_date.strftime('%d %b, %Y')}",
+    plt.annotate(f"${usd_can_yr_high_value}\n{usd_can_yr_high_date.strftime('%d %b, %y')}",
                  xytext=(usd_can_yr_high_date + datetime.timedelta(days=23), usd_can_yr_high_value - 0.005),
                  xy=(usd_can_yr_high_date, usd_can_yr_high_value),
                  xycoords="data",
@@ -213,7 +213,7 @@ def usd_can_chart():
                                  color='#00635A')
                  )
 
-    plt.annotate(f"${usd_can_yr_low_value}\n{usd_can_yr_low_date.strftime('%d %b, %Y')}",
+    plt.annotate(f"${usd_can_yr_low_value}\n{usd_can_yr_low_date.strftime('%d %b, %y')}",
                  xytext=(usd_can_yr_low_date + datetime.timedelta(days=50), usd_can_yr_low_value - 0.0103),
                  xy=(usd_can_yr_low_date, usd_can_yr_low_value),
                  xycoords="data",
@@ -272,13 +272,13 @@ def can_usd_chart():
     plt.yticks([])
     plt.axis('off')
 
-    plt.annotate(f"${usd_can_yr_high_value}\n{usd_can_yr_high_date.strftime('%d %b, %Y')}",
+    plt.annotate(f"${usd_can_yr_high_value}\n{usd_can_yr_high_date.strftime('%d %b, %y')}",
                  xytext=(usd_can_yr_high_date + datetime.timedelta(days=23), usd_can_yr_high_value - 0.005),
                  xy=(usd_can_yr_high_date, usd_can_yr_high_value),
                  xycoords="data",
                  textcoords="data",
                  color='#00635A',
-                 size=12,
+                 size=11,
                  weight='normal',
                  arrowprops=dict(arrowstyle="->",
                                  connectionstyle="arc3, rad=-0.3",
@@ -291,7 +291,7 @@ def can_usd_chart():
                  xycoords="data",
                  textcoords="data",
                  color='#00635A',
-                 size=12,
+                 size=11,
                  weight='normal',
                  arrowprops=dict(arrowstyle="->",
                                  connectionstyle="arc3, rad=0.2",
@@ -343,7 +343,7 @@ def gbp_can_chart():
     plt.yticks([])
     plt.axis('off')
 
-    plt.annotate(f"${gbp_can_yr_high_value}\n{gbp_can_yr_high_date.strftime('%d %b, %Y')}",
+    plt.annotate(f"${gbp_can_yr_high_value}\n{gbp_can_yr_high_date.strftime('%d %b, %y')}",
                  xytext=(gbp_can_yr_high_date - datetime.timedelta(days=113), gbp_can_yr_high_value + 0.025),
                  xy=(gbp_can_yr_high_date, gbp_can_yr_high_value),
                  xycoords="data",
@@ -356,7 +356,7 @@ def gbp_can_chart():
                                  color='#00635A')
                  )
 
-    plt.annotate(f"${gbp_can_yr_low_value}\n{gbp_can_yr_low_date.strftime('%d %b, %Y')}",
+    plt.annotate(f"${gbp_can_yr_low_value}\n{gbp_can_yr_low_date.strftime('%d %b, %y')}",
                  xytext=(gbp_can_yr_low_date + datetime.timedelta(days=42), gbp_can_yr_low_value - 0.0103),
                  xy=(gbp_can_yr_low_date, gbp_can_yr_low_value),
                  xycoords="data",
@@ -418,7 +418,7 @@ def can_gbp_chart():
     plt.yticks([])
     plt.axis('off')
 
-    plt.annotate(f"${can_gbp_yr_high_value}\n{can_gbp_yr_high_date.strftime('%d %b, %Y')}",
+    plt.annotate(f"${can_gbp_yr_high_value}\n{can_gbp_yr_high_date.strftime('%d %b, %y')}",
                  xytext=(can_gbp_yr_high_date + datetime.timedelta(days=23), can_gbp_yr_high_value - 0.005),
                  xy=(can_gbp_yr_high_date, can_gbp_yr_high_value),
                  xycoords="data",
@@ -431,7 +431,7 @@ def can_gbp_chart():
                                  color='#00635A')
                  )
 
-    plt.annotate(f"${can_gbp_yr_low_value}\n{can_gbp_yr_low_date.strftime('%d %b, %Y')}",
+    plt.annotate(f"${can_gbp_yr_low_value}\n{can_gbp_yr_low_date.strftime('%d %b, %y')}",
                  xytext=(can_gbp_yr_low_date - datetime.timedelta(days=130), can_gbp_yr_low_value - 0.0103),
                  xy=(can_gbp_yr_low_date, can_gbp_yr_low_value),
                  xycoords="data",
