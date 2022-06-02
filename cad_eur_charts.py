@@ -418,7 +418,7 @@ def can_gbp_chart():
     plt.yticks([])
     plt.axis('off')
 
-    plt.annotate(f"${can_gbp_yr_high_value}\n{can_gbp_yr_high_date.strftime('%d %b, %y')}",
+    plt.annotate(f"£{can_gbp_yr_high_value}\n{can_gbp_yr_high_date.strftime('%d %b, %y')}",
                  xytext=(can_gbp_yr_high_date + datetime.timedelta(days=23), can_gbp_yr_high_value - 0.005),
                  xy=(can_gbp_yr_high_date, can_gbp_yr_high_value),
                  xycoords="data",
@@ -431,7 +431,7 @@ def can_gbp_chart():
                                  color='#00635A')
                  )
 
-    plt.annotate(f"${can_gbp_yr_low_value}\n{can_gbp_yr_low_date.strftime('%d %b, %y')}",
+    plt.annotate(f"£{can_gbp_yr_low_value}\n{can_gbp_yr_low_date.strftime('%d %b, %y')}",
                  xytext=(can_gbp_yr_low_date - datetime.timedelta(days=130), can_gbp_yr_low_value - 0.0103),
                  xy=(can_gbp_yr_low_date, can_gbp_yr_low_value),
                  xycoords="data",

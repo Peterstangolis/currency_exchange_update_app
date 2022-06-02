@@ -223,26 +223,26 @@ if choose == 'CAD-EUR':
     with col2:
         st.plotly_chart(fig2, use_container_width=True)
 
-    #st.expander
+    with st.expander("Expand to view a chart of yearly exchange rate values"):
 
-    radio = st.radio("Select to view yearly currency trend EURO and CAD", ["1 Year EUR-CAD Chart", "1 Year CAD-EUR Chart"])
-    if radio == "1 Year EUR-CAD Chart":
-        eur_can_chart()
-        image_1 = Image.open("images/euro_can_high_low_chart.png")
+        radio = st.radio("Select to view yearly currency trend EURO and CAD", ["1 Year EUR-CAD Chart", "1 Year CAD-EUR Chart"])
+        if radio == "1 Year EUR-CAD Chart":
+            eur_can_chart()
+            image_1 = Image.open("images/euro_can_high_low_chart.png")
 
-        st.subheader("€1 EUR to CAD Yearly High vs Low")
-        st.image(image_1,
-                 use_column_width=True,
-                 caption = "")
+            st.subheader("€1 EUR to CAD Yearly High vs Low")
+            st.image(image_1,
+                     use_column_width=True,
+                     caption = "")
 
-    if radio == "1 Year CAD-EUR Chart":
-        can_eur_chart()
-        image_2 = Image.open("images/can_euro_high_low_chart.png")
+        if radio == "1 Year CAD-EUR Chart":
+            can_eur_chart()
+            image_2 = Image.open("images/can_euro_high_low_chart.png")
 
-        st.subheader("$1 CAD to EUR Yearly High vs Low")
-        st.image(image_2,
-                 use_column_width=True,
-                 caption = "")
+            st.subheader("$1 CAD to EUR Yearly High vs Low")
+            st.image(image_2,
+                     use_column_width=True,
+                     caption = "")
 
 
     # c1, c2 = st.columns([1, 1])
@@ -345,22 +345,24 @@ if choose == 'CAD-USD':
     with col2:
         st.plotly_chart(fig4, use_container_width=True)
 
-    radio = st.radio("Select to view yearly currency trend USD and CAD",
-                     ["1 Year USD-CAD Chart", "1 Year CAD-USD Chart"])
+    with st.expander("Expand to view a chart of yearly exchange rate values"):
 
-    if radio == "1 Year USD-CAD Chart":
-        usd_can_chart()
-        image_1 = Image.open("images/usd_can_high_low_chart.png")
+        radio = st.radio("Select to view yearly currency trend USD and CAD",
+                         ["1 Year USD-CAD Chart", "1 Year CAD-USD Chart"])
 
-        st.subheader("$1 USD to CAD Yearly High vs Low")
-        st.image(image_1, use_column_width=True)
+        if radio == "1 Year USD-CAD Chart":
+            usd_can_chart()
+            image_1 = Image.open("images/usd_can_high_low_chart.png")
 
-    if radio == "1 Year CAD-USD Chart":
-        can_usd_chart()
-        image_2 = Image.open("images/can_usd_high_low_chart.png")
+            st.subheader("$1 USD to CAD Yearly High vs Low")
+            st.image(image_1, use_column_width=True)
 
-        st.subheader("$1 CAD to USD Yearly High vs Low")
-        st.image(image_2, use_column_width=True)
+        if radio == "1 Year CAD-USD Chart":
+            can_usd_chart()
+            image_2 = Image.open("images/can_usd_high_low_chart.png")
+
+            st.subheader("$1 CAD to USD Yearly High vs Low")
+            st.image(image_2, use_column_width=True)
 
     # c1, c2 = st.columns([1, 1])
     #
@@ -456,21 +458,22 @@ if choose == 'CAD-GBP':
     with col2:
         st.plotly_chart(fig6, use_container_width=True)
 
-    radio = st.radio("Select to view yearly trend", ["1 Year GBP-CAD Chart", "1 Year CAD-GBP Chart"])
+    with st.expander("Expand to view a chart of yearly exchange rate values"):
+        radio = st.radio("Select to view yearly trend", ["1 Year GBP-CAD Chart", "1 Year CAD-GBP Chart"])
 
-    if radio == "1 Year GBP-CAD Chart":
-        gbp_can_chart()
-        image_1 = Image.open("images/gbp_can_high_low_chart.png")
+        if radio == "1 Year GBP-CAD Chart":
+            gbp_can_chart()
+            image_1 = Image.open("images/gbp_can_high_low_chart.png")
 
-        st.subheader("£1 GBP to CAD Yearly High vs Low")
-        st.image(image_1, use_column_width=True)
+            st.subheader("£1 GBP to CAD Yearly High vs Low")
+            st.image(image_1, use_column_width=True)
 
-    if radio == "1 Year CAD-GBP Chart":
-        can_gbp_chart()
-        image_2 = Image.open("images/can_gbp_high_low_chart.png")
+        if radio == "1 Year CAD-GBP Chart":
+            can_gbp_chart()
+            image_2 = Image.open("images/can_gbp_high_low_chart.png")
 
-        st.subheader("$1 CAD to GBP Yearly High vs Low")
-        st.image(image_2, use_column_width=True)
+            st.subheader("$1 CAD to GBP Yearly High vs Low")
+            st.image(image_2, use_column_width=True)
 
     # c1, c2 = st.columns([1,1])
     #
