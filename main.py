@@ -10,7 +10,6 @@ import numpy as np
 
 # matplotlib and seaborn for plotting graphs
 import matplotlib.pyplot as plt
-plt.style.use('seaborn-darkgrid')
 
 ## yahoo finance used to get the data
 import yfinance as yf
@@ -31,7 +30,6 @@ from PIL import Image
 ## Importing functions:
 from currency_data_retrieval import gbpcad_x, cadgbp_x, usdcad_x, cadusd_x, eurcad_x, cadeur_x
 from cad_eur_charts import eur_can_chart, can_eur_chart, usd_can_chart, can_usd_chart, gbp_can_chart, can_gbp_chart
-
 
 
 ## Getting today's date
