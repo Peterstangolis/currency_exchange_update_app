@@ -173,6 +173,14 @@ if choose == 'CAD-EUR':
 
     fig.update_traces(delta_decreasing_color='#00E3CC',
                       delta_increasing_color='#B3483D')
+    fig.add_annotation(dict(font=dict(color = 'lightgrey', size = 16, family = 'Arial'),
+                             text = f'€1 Euro will return ${eur_to_can} Canadian',
+                             x = 0.5,
+                             y = 0,
+                             xref = 'paper',
+                             yref = 'paper',
+                             showarrow = False
+    ))
 
     fig2 = go.Figure(go.Indicator(
         mode="number+delta",
@@ -208,14 +216,14 @@ if choose == 'CAD-EUR':
     #)
     fig2.update_traces(delta_decreasing_color='#00E3CC',
                        delta_increasing_color='#B3483D')
-    # fig2.add_annotation(dict(font=dict(color = 'lightgrey', size = 16, family = 'Arial'),
-    #                          text = 'Change from previous day close',
-    #                          x = 0.5,
-    #                          y = 0.2,
-    #                          xref = 'paper',
-    #                          yref = 'paper',
-    #                          showarrow = False
-    # ))
+    fig2.add_annotation(dict(font=dict(color = 'lightgrey', size = 16, family = 'Arial'),
+                             text = f'$1 Canadian will return €{can_to_eur} Euro',
+                             x = 0.5,
+                             y = 0,
+                             xref = 'paper',
+                             yref = 'paper',
+                             showarrow = False
+    ))
 
     st.caption("🔺/🔻 Change from previous day close")
     col1, col2 = st.columns([1,1])
@@ -301,6 +309,14 @@ if choose == 'CAD-USD':
 
     fig3.update_traces(delta_decreasing_color='#00E3CC',
                       delta_increasing_color='#B3483D')
+    fig3.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
+                             text=f'$1 US Dollar will return ${usd_to_can} Canadian',
+                             x=0.5,
+                             y=0,
+                             xref='paper',
+                             yref='paper',
+                             showarrow=False
+                             ))
 
     fig4 = go.Figure(go.Indicator(
         mode="number+delta",
@@ -328,14 +344,14 @@ if choose == 'CAD-USD':
     fig4.update_traces(delta_decreasing_color='#00E3CC',
                        delta_increasing_color='#B3483D')
 
-    # fig4.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
-    #                          text='Change from previous day close',
-    #                          x=0.5,
-    #                          y=0.2,
-    #                          xref='paper',
-    #                          yref='paper',
-    #                          showarrow=False
-    #                          ))
+    fig4.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
+                             text=f'$1 Canadian will return ${round(can_to_us,3)} US',
+                             x=0.5,
+                             y=0,
+                             xref='paper',
+                             yref='paper',
+                             showarrow=False
+                             ))
     st.title("CAD to USD exchange rates")
 
     st.caption("🔺/🔻 Change from previous day close")
@@ -415,6 +431,15 @@ if choose == 'CAD-GBP':
                       })
     fig5.update_traces(delta_decreasing_color='#00E3CC',
                       delta_increasing_color='#B3483D')
+    fig5.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
+                             text=f'£1 will return ${round(gbp_to_can, 3)} Canadian',
+                             x=0.5,
+                             y=0,
+                             xref='paper',
+                             yref='paper',
+                             showarrow=False
+                             ))
+
 
     fig6 = go.Figure(go.Indicator(
         mode="number+delta",
@@ -440,14 +465,14 @@ if choose == 'CAD-GBP':
                        )
     fig6.update_traces(delta_decreasing_color='#00E3CC',
                        delta_increasing_color='#B3483D')
-    # fig6.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
-    #                          text='Change from previous day close',
-    #                          x=0.5,
-    #                          y=0.2,
-    #                          xref='paper',
-    #                          yref='paper',
-    #                          showarrow=False
-    #                          ))
+    fig6.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
+                             text=f'$1 Canadian will return £{round(can_to_gbp, 3)} British pounds ',
+                             x=0.5,
+                             y=0,
+                             xref='paper',
+                             yref='paper',
+                             showarrow=False
+                             ))
 
     st.title('CAD to GBP exchange rates')
 
