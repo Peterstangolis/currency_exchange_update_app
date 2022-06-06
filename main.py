@@ -241,10 +241,12 @@ if choose == 'CAD-EUR':
                       step=1, key="exchange")
     column1, column2 = st.columns([1, 1])
     with column1:
-        st.subheader(f"€{value} EUR is equal to:\n ${round(value * eur_to_can, 3)} Canadian dollars")
+        st.subheader(f"€{value} EUR is equal to:")
+        st.subheader(f"${round(value * eur_to_can, 3)} Canadian dollars")
 
     with column2:
-        st.subheader(f"${value} CAD is equal to:\n €{round(value * can_to_eur,2)} Euros")
+        st.subheader(f"${value} CAD is equal to:")
+        st.subheader(f"€{round(value * can_to_eur,2)} Euros")
 
     with st.expander("Expand to view a chart of yearly exchange rate values"):
         eur_can_chart()
@@ -384,10 +386,12 @@ if choose == 'CAD-USD':
                       step=1, key="exchange")
     column1, column2 = st.columns([1, 1])
     with column1:
-        st.subheader(f"${value} USD is equal to:\n ${round(value * usd_to_can, 3)} Canadian dollars")
+        st.subheader(f"${value} USD is equal to:")
+        st.subheader(f"${round(value * usd_to_can, 3)} Canadian dollars")
 
     with column2:
-        st.subheader(f"${value} CAD is equal to:\n ${round(value * can_to_us, 3)}  American dollars")
+        st.subheader(f"${value} CAD is equal to:")
+        st.subheader(f"${round(value * can_to_us, 3)}  American dollars")
 
     with st.expander("Expand to view a chart of yearly exchange rate values"):
 
@@ -519,7 +523,8 @@ if choose == 'CAD-GBP':
               step=1, key="exchange")
     column1, column2 = st.columns([1,1])
     with column1:
-        st.subheader(f"£{value} GBP is equal to:\n ${round(value*gbp_to_can,2)} Canadian dollars")
+        st.subheader(f"£{value} GBP is equal to:")
+        st.subheader(f"${round(value*gbp_to_can,2)} Canadian dollars")
 
     with column2:
         st.subheader(f"${value} CAD is equal to:\n £{round(value*can_to_gbp,2)} British pounds")
