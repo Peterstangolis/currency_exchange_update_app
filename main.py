@@ -233,6 +233,19 @@ if choose == 'CAD-EUR':
     with col2:
         st.plotly_chart(fig2, use_container_width=True)
 
+    st.subheader("Currency Exchange Calculator")
+    value = st.slider("Select amount to exchange",
+                      min_value=1,
+                      max_value=10000,
+                      value=1,
+                      step=1, key="exchange")
+    column1, column2 = st.columns([1, 1])
+    with column1:
+        st.subheader(f"€{value} EUR is equal to:\n ${round(value * eur_to_can, 3)} Canadian dollars")
+
+    with column2:
+        st.subheader(f"${value} CAD is equal to:\n €{round(value * can_to_eur,2)} Euros")
+
     with st.expander("Expand to view a chart of yearly exchange rate values"):
         eur_can_chart()
         can_eur_chart()
@@ -363,6 +376,19 @@ if choose == 'CAD-USD':
     with col2:
         st.plotly_chart(fig4, use_container_width=True)
 
+    st.subheader("Currency Exchange Calculator")
+    value = st.slider("Select amount to exchange",
+                      min_value=1,
+                      max_value=10000,
+                      value=1,
+                      step=1, key="exchange")
+    column1, column2 = st.columns([1, 1])
+    with column1:
+        st.subheader(f"${value} USD is equal to:\n ${round(value * usd_to_can, 3)} Canadian dollars")
+
+    with column2:
+        st.subheader(f"${value} CAD is equal to:\n ${round(value * can_to_us, 3)}  American dollars")
+
     with st.expander("Expand to view a chart of yearly exchange rate values"):
 
         radio = st.radio("Select to view yearly currency trend USD and CAD",
@@ -485,6 +511,19 @@ if choose == 'CAD-GBP':
     with col2:
         st.plotly_chart(fig6, use_container_width=True)
 
+    st.subheader("Currency Exchange Calculator")
+    value = st.slider("Select amount to exchange",
+              min_value=1,
+              max_value=10000,
+              value=1,
+              step=1, key="exchange")
+    column1, column2 = st.columns([1,1])
+    with column1:
+        st.subheader(f"£{value} GBP is equal to:\n ${round(value*gbp_to_can,2)} Canadian dollars")
+
+    with column2:
+        st.subheader(f"${value} CAD is equal to:\n £{round(value*can_to_gbp,2)} British pounds")
+
     with st.expander("Expand to view a chart of yearly exchange rate values"):
         radio = st.radio("Select to view yearly trend", ["1 Year GBP-CAD Chart", "1 Year CAD-GBP Chart"])
         gbp_can_chart()
@@ -501,6 +540,8 @@ if choose == 'CAD-GBP':
 
             st.subheader("$1 CAD to GBP Yearly High vs Low")
             st.image(image_2, use_column_width=True)
+
+
 
     # c1, c2 = st.columns([1,1])
     #
