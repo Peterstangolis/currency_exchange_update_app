@@ -309,8 +309,12 @@ if choose == 'CAD-EUR':
 
     st.sidebar.markdown("""___
     """)
+    st.sidebar.markdown("""
+    
+    
+    """)
     with st.sidebar.expander(
-        "About App"
+        emoji.emojize(':information: About App')
     ):
         st.markdown(f"""
         > A currency exchanger app pulls in data from the [yfinance](https://pypi.org/project/yfinance/) & [yahoofinancials](https://pypi.org/project/yahoofinancials/) python libraries.
