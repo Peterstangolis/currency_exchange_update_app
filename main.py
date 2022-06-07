@@ -52,6 +52,12 @@ date_time_tz = today.astimezone().strftime("%A %B %d, %Y  %H:%M.%S %Z")
 ## Today's date and time
 date_time = today.strftime("%A %B %d, %Y  %T")
 
+## Emojis
+can = '🇨🇦'
+usa = '🇺🇸'
+gb = '🇬🇧'
+europe = '🇪🇺'
+
 
 #len_prices = len(eur_can.get_historical_price_data(str(three_months_ago.date()), str(today.date()), 'daily')['CADEUR=X']['prices'])
 
@@ -233,20 +239,24 @@ if choose == 'CAD-EUR':
     with col2:
         st.plotly_chart(fig2, use_container_width=True)
 
-    st.subheader("Currency Exchange Calculator")
-    value = st.slider("Select amount to exchange",
-                      min_value=1,
-                      max_value=10000,
-                      value=1,
-                      step=1, key="exchange")
+
+    st.sidebar.subheader("Currency Exchange Calculator")
+
+    st.sidebar.write(f"{can} {europe}")
+    value = st.sidebar.slider("Select amount to exchange",
+                        min_value=1,
+                        max_value=10000,
+                        value=100,
+                        step=1, key="exchange")
     column1, column2 = st.columns([1, 1])
     with column1:
-        st.subheader(f"€{value} EUR is equal to:")
-        st.subheader(f"${round(value * eur_to_can, 3)} Canadian dollars")
+        st.sidebar.subheader(f"€{value} EUR is equal to: ${round(value * eur_to_can, 3)}CAD ")
+        #st.sidebar.subheader(f"${round(value * eur_to_can, 3)} Canadian dollars")
 
     with column2:
-        st.subheader(f"${value} CAD is equal to:")
-        st.subheader(f"€{round(value * can_to_eur,2)} Euros")
+        st.sidebar.subheader(f"${value} CAD is equal to: €{round(value * can_to_eur,2)} Euros")
+        #st.sidebar.subheader(f"€{round(value * can_to_eur,2)} Euros")
+
 
     with st.expander("Expand to view a chart of yearly exchange rate values"):
         eur_can_chart()
@@ -378,20 +388,20 @@ if choose == 'CAD-USD':
     with col2:
         st.plotly_chart(fig4, use_container_width=True)
 
-    st.subheader("Currency Exchange Calculator")
-    value = st.slider("Select amount to exchange",
+    st.sidebar.subheader("Currency Exchange Calculator")
+    st.sidebar.write(f"{can} {usa}")
+    value = st.sidebar.slider("Select amount to exchange",
                       min_value=1,
                       max_value=10000,
-                      value=1,
+                      value=100,
                       step=1, key="exchange")
-    column1, column2 = st.columns([1, 1])
+
+    column1, column2 = st.sidebar.columns([1, 1])
     with column1:
-        st.subheader(f"${value} USD is equal to:")
-        st.subheader(f"${round(value * usd_to_can, 3)} Canadian dollars")
+        st.sidebar.subheader(f"${value}USD is equal to:${round(value*usd_to_can,3)} CAD")
 
     with column2:
-        st.subheader(f"${value} CAD is equal to:")
-        st.subheader(f"${round(value * can_to_us, 3)}  American dollars")
+        st.sidebar.subheader(f"${value}CAD is equal to:${round(value*can_to_us,3)} USD")
 
     with st.expander("Expand to view a chart of yearly exchange rate values"):
 
@@ -515,19 +525,19 @@ if choose == 'CAD-GBP':
     with col2:
         st.plotly_chart(fig6, use_container_width=True)
 
-    st.subheader("Currency Exchange Calculator")
-    value = st.slider("Select amount to exchange",
+    st.sidebar.subheader("Currency Exchange Calculator")
+    st.sidebar.write(f"{can} {gb}")
+    value = st.sidebar.slider("Select amount to exchange",
               min_value=1,
               max_value=10000,
-              value=1,
+              value=100,
               step=1, key="exchange")
-    column1, column2 = st.columns([1,1])
+    column1, column2 = st.sidebar.columns([1,1])
     with column1:
-        st.subheader(f"£{value} GBP is equal to:")
-        st.subheader(f"${round(value*gbp_to_can,2)} Canadian dollars")
+        st.sidebar.subheader(f"£{value} GBP is equal to: ${round(value*gbp_to_can,2)} CAD")
 
     with column2:
-        st.subheader(f"${value} CAD is equal to:\n £{round(value*can_to_gbp,2)} British pounds")
+        st.sidebar.subheader(f"${value} CAD is equal to: £{round(value*can_to_gbp,2)} GBP")
 
     with st.expander("Expand to view a chart of yearly exchange rate values"):
         radio = st.radio("Select to view yearly trend", ["1 Year GBP-CAD Chart", "1 Year CAD-GBP Chart"])

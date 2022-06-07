@@ -58,12 +58,12 @@ def eur_can_chart():
                  xy=(eur_can_yr_high_date, eur_can_yr_high_value),
                  xycoords="data",
                  textcoords="data",
-                 color='#00635A',
+                 color='#B3483D',
                  size=12,
                  weight='normal',
                  arrowprops=dict(arrowstyle="->",
                                  connectionstyle="arc3, rad=-0.3",
-                                 color='#00E3CC')
+                                 color='#B3483D')
                  )
 
     plt.annotate(f"${eur_can_yr_low_value}\n{eur_can_yr_low_date.strftime('%d %b, %y')}",
@@ -71,7 +71,7 @@ def eur_can_chart():
                  xy=(eur_can_yr_low_date, eur_can_yr_low_value),
                  xycoords="data",
                  textcoords="data",
-                 color='#00635A',
+                 color='#00E3CC',
                  size=12,
                  weight='normal',
                  arrowprops=dict(arrowstyle="->",
