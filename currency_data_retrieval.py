@@ -37,7 +37,7 @@ def usdcad_x(c):
 @st.experimental_memo
 def cadusd_x(c):
     can_us = YahooFinancials('CADUSD=X')
-    can_to_us = can_us.get_current_price()
+    can_to_us = round(can_us.get_current_price(),3)
     prev_close_can_us = can_us.get_prev_close_price()
     return can_us, can_to_us, prev_close_can_us
 
