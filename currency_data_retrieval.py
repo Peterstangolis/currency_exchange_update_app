@@ -53,6 +53,6 @@ def gbpcad_x(c):
 @st.experimental_memo
 def cadgbp_x(c):
     can_gbp = YahooFinancials('CADGBP=X')
-    can_to_gbp = round(can_gbp.get_current_price(),2)
+    can_to_gbp = round(can_gbp.get_current_price(),3)
     prev_close_can_gbp = can_gbp.get_prev_close_price()
     return can_gbp, can_to_gbp, prev_close_can_gbp

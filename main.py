@@ -36,6 +36,8 @@ from cad_eur_charts import eur_can_chart, can_eur_chart, usd_can_chart, can_usd_
 today = datetime.datetime.today()
 today_text = today.strftime("%A %B %d, %Y")
 
+
+
 ## Yesterdays Date:
 yest_day = today - timedelta(days=1)
 
@@ -236,8 +238,10 @@ if choose == 'CAD-EUR':
 
     with col1:
         st.plotly_chart(fig, use_container_width=True)
+        st.caption("Testing the caption for this column-1")
     with col2:
         st.plotly_chart(fig2, use_container_width=True)
+        st.caption("testing the caption for this column-2")
 
 
     st.sidebar.subheader("Currency Exchange Calculator")
@@ -302,6 +306,17 @@ if choose == 'CAD-EUR':
         st.caption(f"Last Updated {date_time_tz}")
     with c3:
         st.caption("")
+
+    st.sidebar.markdown("""___
+    """)
+    with st.sidebar.expander(
+        "About App"
+    ):
+        st.markdown(f"""
+        > A currency exchanger app pulls in data from the [yfinance](https://pypi.org/project/yfinance/) & [yahoofinancials](https://pypi.org/project/yahoofinancials/) python libraries.
+        > It currently favors the exchange of the {can} dollar to {europe} | {usa} | {gb}.
+        """)
+        st.caption(f"©️ stanalytics, {datetime.datetime.today().strftime('%Y')}")
 
 
 if choose == 'CAD-USD':
