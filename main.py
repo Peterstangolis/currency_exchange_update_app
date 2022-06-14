@@ -179,8 +179,8 @@ if choose == 'CAD-EUR':
     #     source=Image.open('images/euro_can_high_low_chart.png')
     # )
 
-    fig.update_traces(delta_decreasing_color='#00E3CC',
-                      delta_increasing_color='#B3483D')
+    fig.update_traces(delta_decreasing_color='#B3483D',
+                      delta_increasing_color='#00E3CC')
     fig.add_annotation(dict(font=dict(color = 'lightgrey', size = 16, family = 'Arial'),
                              text = f'€1 Euro will return ${eur_to_can} Canadian',
                              x = 0.5,
@@ -222,8 +222,8 @@ if choose == 'CAD-EUR':
     #     layer='above',
     #     source = Image.open('images/euro_can_high_low_chart_dark.png')
     #)
-    fig2.update_traces(delta_decreasing_color='#00E3CC',
-                       delta_increasing_color='#B3483D')
+    fig2.update_traces(delta_decreasing_color='#B3483D',
+                       delta_increasing_color='#00E3CC')
     fig2.add_annotation(dict(font=dict(color = 'lightgrey', size = 16, family = 'Arial'),
                              text = f'$1 Canadian will return €{can_to_eur} Euro',
                              x = 0.5,
@@ -351,8 +351,8 @@ if choose == 'CAD-USD':
                           'font_family': 'Overpass',
                       })
 
-    fig3.update_traces(delta_decreasing_color='#00E3CC',
-                      delta_increasing_color='#B3483D')
+    fig3.update_traces(delta_decreasing_color='#B3483D',
+                      delta_increasing_color='#00E3CC')
     fig3.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
                              text=f'$1 US Dollar will return ${usd_to_can} Canadian',
                              x=0.5,
@@ -385,8 +385,8 @@ if choose == 'CAD-USD':
                            'font_family': 'Overpass',
                        },
                        )
-    fig4.update_traces(delta_decreasing_color='#00E3CC',
-                       delta_increasing_color='#B3483D')
+    fig4.update_traces(delta_decreasing_color='#B3483D',
+                       delta_increasing_color='#00E3CC')
 
     fig4.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
                              text=f'$1 Canadian will return ${round(can_to_us,3)} US',
@@ -417,10 +417,10 @@ if choose == 'CAD-USD':
 
     column1, column2 = st.sidebar.columns([1, 1])
     with column1:
-        st.sidebar.subheader(f"${value}USD is equal to  ${round(value*usd_to_can,3)} CAD")
+        st.sidebar.subheader(f"$ {value}USD is equal to  $ {round(value*usd_to_can,3)} CAD")
 
     with column2:
-        st.sidebar.subheader(f"${value} CAD is equal to  ${round(value*can_to_us,3)} USD")
+        st.sidebar.subheader(f"$ {value} CAD is equal to  $ {round(value*can_to_us,3)} USD")
 
     with st.expander("Expand to view a chart of yearly exchange rate values"):
 
@@ -488,8 +488,8 @@ if choose == 'CAD-GBP':
                           'yanchor': 'top',
                           'font_family': 'Overpass',
                       })
-    fig5.update_traces(delta_decreasing_color='#00E3CC',
-                      delta_increasing_color='#B3483D')
+    fig5.update_traces(delta_decreasing_color='#B3483D',
+                      delta_increasing_color='#00E3CC')
     fig5.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
                              text=f'£1 will return ${round(gbp_to_can, 3)} Canadian',
                              x=0.5,
@@ -522,8 +522,8 @@ if choose == 'CAD-GBP':
                            'font_family': 'Overpass',
                        },
                        )
-    fig6.update_traces(delta_decreasing_color='#00E3CC',
-                       delta_increasing_color='#B3483D')
+    fig6.update_traces(delta_decreasing_color='#B3483D',
+                       delta_increasing_color='#00E3CC')
     fig6.add_annotation(dict(font=dict(color='lightgrey', size=16, family='Arial'),
                              text=f'$1 Canadian will return £{round(can_to_gbp, 3)} British pounds ',
                              x=0.5,
