@@ -253,8 +253,12 @@ if choose == 'CAD-EUR':
                         value=100,
                         step=1, key="exchange")
     column1, column2 = st.columns([1, 1])
+    new_eur_can = round(value * eur_to_can, 2)
+    eur_can_text = '<p style="color:#ABE1CA; font-weight:600; font-size:18px;">€{value} EUR is equal to: ${new_eur_can} CAD</p>'.format(value = value, new_eur_can = new_eur_can)
+
     with column1:
-        st.sidebar.subheader(f"€{value} EUR is equal to: ${round(value * eur_to_can, 3)}CAD ")
+        st.sidebar.markdown(eur_can_text, unsafe_allow_html=True)
+        #st.sidebar.subheader(f"€{value} EUR is equal to: ${round(value * eur_to_can, 3)}CAD ")
         #st.sidebar.subheader(f"${round(value * eur_to_can, 3)} Canadian dollars")
 
     with column2:
@@ -416,8 +420,12 @@ if choose == 'CAD-USD':
                       step=1, key="exchange")
 
     column1, column2 = st.sidebar.columns([1, 1])
+    new_us_can = round(value * usd_to_can,2)
+    us_can_text = '<p style="color:#ABE1CA; font-weight:600; font-size:18px;">${value} USD is equal to: ${new_us_can} CAD</p>'.format(value = value, new_us_can = new_us_can)
+
     with column1:
-        st.sidebar.subheader(f"$ {value} USD is equal to  {round(value*usd_to_can,3)} CAD")
+        st.sidebar.markdown(us_can_text, unsafe_allow_html=True)
+        #st.sidebar.subheader(f"$ {value} USD is equal to  {round(value*usd_to_can,3)} CAD")
 
     with column2:
         st.sidebar.subheader(f"$ {value} CAD is equal to  {round(value*can_to_us,3)} USD")
@@ -552,8 +560,13 @@ if choose == 'CAD-GBP':
               value=100,
               step=1, key="exchange")
     column1, column2 = st.sidebar.columns([1,1])
+
+    new_gbp_can = round(value * gbp_to_can,2)
+    gbd_can_text = '<p style="color:#ABE1CA; font-weight:600; font-size:18px;">£{value} GBP is equal to: ${new_gbp_can} CAD</p>'.format(value = value, new_gbp_can = new_gbp_can)
+
     with column1:
-        st.sidebar.subheader(f"£{value} GBP is equal to: ${round(value*gbp_to_can,2)} CAD")
+        st.sidebar.markdown(gbd_can_text, unsafe_allow_html=True)
+        #st.sidebar.subheader(f"£{value} GBP is equal to: ${round(value*gbp_to_can,2)} CAD")
 
     with column2:
         st.sidebar.subheader(f"${value} CAD is equal to: £{round(value*can_to_gbp,2)} GBP")
