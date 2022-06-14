@@ -249,7 +249,7 @@ if choose == 'CAD-EUR':
     st.sidebar.write(f"{can} {europe}")
     value = st.sidebar.slider("Select amount to exchange",
                         min_value=1,
-                        max_value=10000,
+                        max_value=1000,
                         value=100,
                         step=1, key="exchange")
     column1, column2 = st.columns([1, 1])
@@ -411,7 +411,7 @@ if choose == 'CAD-USD':
     st.sidebar.write(f"{can} {usa}")
     value = st.sidebar.slider("Select amount to exchange",
                       min_value=1,
-                      max_value=10000,
+                      max_value=1000,
                       value=100,
                       step=1, key="exchange")
 
@@ -548,7 +548,7 @@ if choose == 'CAD-GBP':
     st.sidebar.write(f"{can} {gb}")
     value = st.sidebar.slider("Select amount to exchange",
               min_value=1,
-              max_value=10000,
+              max_value=1000,
               value=100,
               step=1, key="exchange")
     column1, column2 = st.sidebar.columns([1,1])
