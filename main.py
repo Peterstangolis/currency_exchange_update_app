@@ -317,8 +317,8 @@ if choose == 'CAD-EUR':
         emoji.emojize(':information:  About App')
     ):
         st.markdown(f"""
-        > A currency exchanger app pulls in data from the [yfinance](https://pypi.org/project/yfinance/) & [yahoofinancials](https://pypi.org/project/yahoofinancials/) python libraries.
-        > It currently favors the exchange of the {can} dollar to {europe} | {usa} | {gb}.
+        > A currency exchange app that retrieves data from the [yfinance](https://pypi.org/project/yfinance/) & [yahoofinancials](https://pypi.org/project/yahoofinancials/) python libraries.
+        > It currently works with the exchange of the {can} dollar to {europe} | {usa} | {gb} & 🔙.
         """)
         st.caption(f"©️ stanalytics, {datetime.datetime.today().strftime('%Y')}")
 
