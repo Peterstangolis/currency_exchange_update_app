@@ -286,7 +286,7 @@ def can_usd_chart():
                  )
 
     plt.annotate(f"${usd_can_yr_low_value}\n{usd_can_yr_low_date.strftime('%d %b, %Y')}",
-                 xytext=(usd_can_yr_low_date + datetime.timedelta(days=60), usd_can_yr_low_value - 0.0133),
+                 xytext=(usd_can_yr_low_date + datetime.timedelta(days=60), usd_can_yr_low_value - 0.0111),
                  xy=(usd_can_yr_low_date, usd_can_yr_low_value),
                  xycoords="data",
                  textcoords="data",

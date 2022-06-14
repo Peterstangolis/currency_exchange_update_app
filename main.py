@@ -417,10 +417,10 @@ if choose == 'CAD-USD':
 
     column1, column2 = st.sidebar.columns([1, 1])
     with column1:
-        st.sidebar.subheader(f"$ {value}USD is equal to  $ {round(value*usd_to_can,3)} CAD")
+        st.sidebar.subheader(f"$ {value} USD is equal to  {round(value*usd_to_can,3)} CAD")
 
     with column2:
-        st.sidebar.subheader(f"$ {value} CAD is equal to  $ {round(value*can_to_us,3)} USD")
+        st.sidebar.subheader(f"$ {value} CAD is equal to  {round(value*can_to_us,3)} USD")
 
     with st.expander("Expand to view a chart of yearly exchange rate values"):
 
