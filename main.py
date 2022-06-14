@@ -238,10 +238,10 @@ if choose == 'CAD-EUR':
 
     with col1:
         st.plotly_chart(fig, use_container_width=True)
-        st.caption("Testing the caption for this column-1")
+        #st.caption("Testing the caption for this column-1")
     with col2:
         st.plotly_chart(fig2, use_container_width=True)
-        st.caption("testing the caption for this column-2")
+        #st.caption("testing the caption for this column-2")
 
 
     st.sidebar.subheader("Currency Exchange Calculator")
