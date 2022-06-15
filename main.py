@@ -326,6 +326,12 @@ if choose == 'CAD-EUR':
         """)
         st.caption(f"©️ stanalytics, {datetime.datetime.today().strftime('%Y')}")
 
+    st.sidebar.markdown('')
+    st.sidebar.write("Select button below to clear the stored data and retrieve the latest currency exchange rates from YahooFinancials")
+    clear_data = st.sidebar.button("Clear stored data")
+    if clear_data:
+        cadeur_x.clear()
+        eurcad_x.clear()
 
 if choose == 'CAD-USD':
     usd_can, usd_to_can, prev_close_us_can = usdcad_x("USDCAD=X")
@@ -429,6 +435,16 @@ if choose == 'CAD-USD':
 
     with column2:
         st.sidebar.subheader(f"$ {value} CAD is equal to  {round(value*can_to_us,3)} USD")
+
+    st.sidebar.markdown("""___
+      """)
+    st.sidebar.markdown('')
+    st.sidebar.write(
+        "Select button below to clear the stored data and retrieve the latest currency exchange rates from YahooFinancials")
+    clear_data = st.sidebar.button("Clear stored data")
+    if clear_data:
+        cadusd_x.clear()
+        usdcad_x.clear()
 
     with st.expander("Expand to view a chart of yearly exchange rate values"):
 
@@ -570,6 +586,16 @@ if choose == 'CAD-GBP':
 
     with column2:
         st.sidebar.subheader(f"${value} CAD is equal to: £{round(value*can_to_gbp,2)} GBP")
+
+    st.sidebar.markdown("""___
+       """)
+    st.sidebar.markdown('')
+    st.sidebar.write(
+        "Select button below to clear the stored data and retrieve the latest currency exchange rates from YahooFinancials")
+    clear_data = st.sidebar.button("Clear stored data")
+    if clear_data:
+        cadgbp_x.clear()
+        gbpcad_x.clear()
 
     with st.expander("Expand to view a chart of yearly exchange rate values"):
         radio = st.radio("Select to view yearly trend", ["1 Year GBP-CAD Chart", "1 Year CAD-GBP Chart"])
