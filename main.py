@@ -311,12 +311,23 @@ if choose == 'CAD-EUR':
     with c3:
         st.caption("")
 
-    st.sidebar.markdown("""___
-    """)
+
     st.sidebar.markdown("""
     
     
     """)
+
+    st.sidebar.markdown('')
+    st.sidebar.write("Select button below to clear the stored data and retrieve the latest currency exchange rates from YahooFinancials")
+    clear_data = st.sidebar.button("Clear stored data")
+    if clear_data:
+        cadeur_x.clear()
+        eurcad_x.clear()
+
+    st.sidebar.markdown("""___
+    """)
+
+
     with st.sidebar.expander(
         emoji.emojize(':information:  About App')
     ):
@@ -326,12 +337,6 @@ if choose == 'CAD-EUR':
         """)
         st.caption(f"©️ stanalytics, {datetime.datetime.today().strftime('%Y')}")
 
-    st.sidebar.markdown('')
-    st.sidebar.write("Select button below to clear the stored data and retrieve the latest currency exchange rates from YahooFinancials")
-    clear_data = st.sidebar.button("Clear stored data")
-    if clear_data:
-        cadeur_x.clear()
-        eurcad_x.clear()
 
 if choose == 'CAD-USD':
     usd_can, usd_to_can, prev_close_us_can = usdcad_x("USDCAD=X")
