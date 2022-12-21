@@ -120,7 +120,7 @@ currencies = ['CADGBP=X','GBPCAD=X', 'CADUSD=X', 'USDCAD=X','CADEUR=X', 'EURCAD=
 #st.title("Enter Title Here:")
 st.set_page_config(layout="",
                    page_title="CAD to USD & EUR CONVERSION",
-                   page_icon="<i class="fa-solid fa-circle-dollar"></i>")
+                   page_icon="circle-dollar"")
 
 ## Horizontal Menu Bar
 choose = option_menu("Select to view updated exchange rate", ['CAD-EUR', 'CAD-USD', 'CAD-GBP'],
