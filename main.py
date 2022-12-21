@@ -41,12 +41,7 @@ today_text = today.strftime("%A %B %d, %Y")
 ## Yesterdays Date:
 yest_day = today - timedelta(days=1)
 
-## 1 week ago
-#last_week = today - timedelta(weeks=4)
 
-## 3 months ago
-#three_months_ago = today - \
-#                   pd.offsets.DateOffset(months=3)
 
 ## Today's date, time and timezone
 date_time_tz = today.astimezone().strftime("%A %B %d, %Y  %H:%M.%S %Z")
@@ -123,6 +118,9 @@ currencies = ['CADGBP=X','GBPCAD=X', 'CADUSD=X', 'USDCAD=X','CADEUR=X', 'EURCAD=
 
 
 #st.title("Enter Title Here:")
+st.set_page_config(layout="",
+                   page_title="CAD to USD & EUR CONVERSION",
+                   page_icon="<i class="fa-solid fa-circle-dollar"></i>")
 
 ## Horizontal Menu Bar
 choose = option_menu("Select to view updated exchange rate", ['CAD-EUR', 'CAD-USD', 'CAD-GBP'],
