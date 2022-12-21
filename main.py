@@ -118,7 +118,7 @@ currencies = ['CADGBP=X','GBPCAD=X', 'CADUSD=X', 'USDCAD=X','CADEUR=X', 'EURCAD=
 
 
 #st.title("Enter Title Here:")
-st.set_page_config(layout="narrow",
+st.set_page_config(
                    page_title="CAD to USD & EUR CONVERSION",
                    page_icon="circle-dollar")
 
