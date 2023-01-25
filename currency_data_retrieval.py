@@ -6,14 +6,14 @@ from datetime import datetime, timedelta
 import datetime
 
 import streamlit as st
-
 from yahoofinancials import YahooFinancials
 
 ## EURCAD=X
 @st.experimental_memo
 def eurcad_x(c):
     eur_can = YahooFinancials(c)
-    eur_to_can = round(eur_can.get_current_price(),3)
+    eur_to_can = eur_can.get_current_price()
+    print(eur_to_can)
     prev_close_eur_can = eur_can.get_prev_close_price()
     return eur_can, eur_to_can, prev_close_eur_can
 
