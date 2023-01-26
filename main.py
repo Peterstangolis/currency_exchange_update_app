@@ -8,12 +8,6 @@ from datetime import timedelta
 import pandas as pd
 import numpy as np
 
-# matplotlib and seaborn for plotting graphs
-import matplotlib.pyplot as plt
-
-## yahoo finance used to get the data
-import yfinance as yf
-from yahoofinancials import YahooFinancials
 
 ## streamlit
 import streamlit as st
@@ -36,12 +30,8 @@ from cad_eur_charts import eur_can_chart, can_eur_chart, usd_can_chart, can_usd_
 today = datetime.datetime.today()
 today_text = today.strftime("%A %B %d, %Y")
 
-
-
 ## Yesterdays Date:
 yest_day = today - timedelta(days=1)
-
-
 
 ## Today's date, time and timezone
 date_time_tz = today.astimezone().strftime("%A %B %d, %Y  %H:%M.%S %Z")
@@ -56,71 +46,17 @@ gb = '🇬🇧'
 europe = '🇪🇺'
 
 
-#len_prices = len(eur_can.get_historical_price_data(str(three_months_ago.date()), str(today.date()), 'daily')['CADEUR=X']['prices'])
-
-
-# #print("Euro to Canadian")
-# eur_can = YahooFinancials('EURCAD=X')
-# eur_to_can = eur_can.get_current_price()
-# eur_to_can = round(eur_to_can,3)
-# #print("Previous Close Price: Euro - Can")
-# prev_close_eur_can = eur_can.get_prev_close_price()
-# #print()
-# #print("Canadian to Euro")
-# can_eur = YahooFinancials('CADEUR=X')
-# can_to_eur = can_eur.get_current_price()
-# can_to_eur = round(can_to_eur,3)
-# #print("Previous Close Price: Can - Eur")
-# prev_close_can_eur = can_eur.get_prev_close_price()
-
-
-#print("US to Canadian")
-# usd_can = YahooFinancials('USDCAD=X')
-# usd_to_can = usd_can.get_current_price()
-# usd_to_can = round(usd_to_can,3)
-# #print("Previous Close Price: USD - Can")
-# prev_close_us_can = usd_can.get_prev_close_price()
-# #print()
-# #print("Canadian to US")
-# can_us = YahooFinancials('CADUSD=X')
-# can_to_us = can_us.get_current_price()
-# can_to_us = round(can_to_us, 3)
-# #print("Previous Close Price: CAN - USD")
-# prev_close_can_us = can_us.get_prev_close_price()
-
-
-#print("GBP to Canadian")
-# gbp_can = YahooFinancials('GBPCAD=X')
-# gbp_to_can = gbp_can.get_current_price()
-# gbp_to_can = round(gbp_to_can,3)
-# #print("Previous Close: GBP - CAN")
-# prev_close_gbp_can = gbp_can.get_prev_close_price()
-# #print()
-# #print("CAN to GBP")
-# can_gbp = YahooFinancials('CADGBP=X')
-# can_to_gbp = can_gbp.get_current_price()
-# can_to_gbp = round(can_to_gbp,3)
-# prev_close_can_gbp = can_gbp.get_prev_close_price()
-
 currencies = ['CADGBP=X','GBPCAD=X', 'CADUSD=X', 'USDCAD=X','CADEUR=X', 'EURCAD=X']
 
-# def currency_prices(c):
-#     closing_prices = []
-#     dates = []
-#     for i in range(0, len_prices):
-#         close = eur_can.get_historical_price_data(str(three_months_ago.date()), str(today.date()), 'daily')[c]['prices'][i]['close']
-#         date = eur_can.get_historical_price_data(str(three_months_ago.date()), str(today.date()), 'daily')[c]['prices'][i]['formatted_date']
-#         closing_prices.append(round(close,3))
-#         dates.append(date)
-#
-#     d2 = {"Date" : dates, "Closing Price" : closing_prices}
-#     df3 = pd.DataFrame(d2)
+## Attributions:
+
+
 
 
 #st.title("Enter Title Here:")
 st.set_page_config(
                    page_title="CAD to USD & EUR CONVERSION",
-                   page_icon="circle-dollar")
+                   page_icon="💵")
 
 ## Horizontal Menu Bar
 choose = option_menu("Select to view updated exchange rate", ['CAD-EUR', 'CAD-USD', 'CAD-GBP'],
@@ -165,16 +101,7 @@ if choose == 'CAD-EUR':
                           'yanchor': 'top',
                           'font_family': 'Overpass',
                       })
-    # fig.add_layout_image(
-    #     xref='paper',
-    #     yref='paper',
-    #     x=-0.4,
-    #     y=0.4,
-    #     sizex=1.6,
-    #     sizey=1.5,
-    #     layer='above',
-    #     source=Image.open('images/euro_can_high_low_chart.png')
-    # )
+
 
     fig.update_traces(delta_decreasing_color='#B3483D',
                       delta_increasing_color='#00E3CC')
@@ -209,16 +136,7 @@ if choose == 'CAD-EUR':
                            'font_family': 'Overpass',
                        },
                        )
-    # fig2.add_layout_image(
-    #     xref='paper',
-    #     yref='paper',
-    #     x=-0.4,
-    #     y=0.4,
-    #     sizex= 1.6,
-    #     sizey= 1.5,
-    #     layer='above',
-    #     source = Image.open('images/euro_can_high_low_chart_dark.png')
-    #)
+
     fig2.update_traces(delta_decreasing_color='#B3483D',
                        delta_increasing_color='#00E3CC')
     fig2.add_annotation(dict(font=dict(color = 'lightgrey', size = 16, family = 'Arial'),
@@ -243,7 +161,15 @@ if choose == 'CAD-EUR':
 
     st.sidebar.subheader("Currency Exchange Calculator")
 
-    st.sidebar.write(f"{can} {europe}")
+    #st.sidebar.write(f"{can} {europe}")
+    with st.sidebar:
+        col3, col4 = st.columns((1,1))
+        with col3:
+            st.image("images/cad_coin.png", width=70)
+            st.write(f"{can}")
+        with col4:
+            st.image("images/eur_coin.png", width=75)
+            st.write(f"{europe}")
     value = st.sidebar.slider("Select amount to exchange",
                         min_value=1,
                         max_value=1000,
@@ -285,17 +211,6 @@ if choose == 'CAD-EUR':
                      caption = "")
 
 
-    # c1, c2 = st.columns([1, 1])
-    #
-    # with c1:
-    #     st.image(image_1,
-    #     use_column_width = True,
-    #     caption = "")
-    #
-    # with c2:
-    #     st.image(image_2,
-    #     use_column_width = True,
-    #     caption = "")
 
     st.subheader(" ")
 
@@ -420,7 +335,17 @@ if choose == 'CAD-USD':
         st.plotly_chart(fig4, use_container_width=True)
 
     st.sidebar.subheader("Currency Exchange Calculator")
-    st.sidebar.write(f"{can} {usa}")
+    #st.sidebar.write(f"{can} {usa}")
+    with st.sidebar:
+        col5, col6 = st.columns((1,1))
+        with col5:
+            st.image("images/cad_coin.png", width=70)
+            st.write(f"{can}")
+        with col6:
+            st.image("images/usd_coin.png", width=75)
+            st.write(f"{usa}")
+
+
     value = st.sidebar.slider("Select amount to exchange",
                       min_value=1,
                       max_value=1000,
@@ -467,17 +392,6 @@ if choose == 'CAD-USD':
             st.subheader("$1 CAD to USD Yearly High vs Low")
             st.image(image_2, use_column_width=True)
 
-    # c1, c2 = st.columns([1, 1])
-    #
-    # with c1:
-    #     st.image(image_1,
-    #              use_column_width=True,
-    #              caption="USD-CAD")
-    #
-    # with c2:
-    #     st.image(image_2,
-    #              use_column_width=True,
-    #              caption="CAD-USD")
 
     c1, c2, c3 = st.columns([1, 3, 1])
 
@@ -571,7 +485,16 @@ if choose == 'CAD-GBP':
         st.plotly_chart(fig6, use_container_width=True)
 
     st.sidebar.subheader("Currency Exchange Calculator")
-    st.sidebar.write(f"{can} {gb}")
+    #st.sidebar.write(f"{can} {gb}")
+    with st.sidebar:
+        col7, col8 = st.columns((1,1))
+        with col7:
+            st.image("images/cad_coin.png", width=70)
+            st.write(f"{can}")
+        with col8:
+            st.image("images/gbd_coin.png", width=75)
+            st.write(f"{gb}")
+
     value = st.sidebar.slider("Select amount to exchange",
               min_value=1,
               max_value=1000,

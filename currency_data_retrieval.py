@@ -93,7 +93,7 @@ def cadusd_x(c):
     yesterday = (dt.datetime.today() - timedelta(days=1)).strftime("%Y-%m-%d")
     last_year = (dt.datetime.today() - timedelta(days=365)).strftime("%Y-%m-%d")
 
-    can_us = YahooFinancials(c)
+    can_us = YahooFinancials('CADUSD=X')
     can_us_today = can_us.get_historical_price_data(start_date=today, end_date=today,
                                                       time_interval='daily')
     can_us_yest = can_us.get_historical_price_data(start_date=yesterday, end_date=yesterday,
@@ -103,6 +103,7 @@ def cadusd_x(c):
 
     can_to_us = round(can_us_today['CADUSD=X']['prices'][0]['adjclose'], 3)
     prev_close_can_us = round(can_us_yest['CADUSD=X']['prices'][0]['adjclose'], 3)
+    print(can_to_us, prev_close_can_us)
 
     return can_us, can_to_us, prev_close_can_us
 
