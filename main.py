@@ -145,7 +145,6 @@ if choose == 'CAD-EUR':
 
     st.title('CAD to EUR exchange rates')
 
-
     fig = go.Figure(go.Indicator(
         mode="number+delta",
         value=eur_to_can,
