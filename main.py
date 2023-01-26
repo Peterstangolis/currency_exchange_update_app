@@ -168,7 +168,7 @@ if choose == 'CAD-EUR':
             st.image("images/cad_coin.png", width=70)
             st.write(f"{can}")
         with col4:
-            st.image("images/eur_coin.png", width=75)
+            st.image("images/eur_coin3.png", width=80)
             st.write(f"{europe}")
     value = st.sidebar.slider("Select amount to exchange",
                         min_value=1,
